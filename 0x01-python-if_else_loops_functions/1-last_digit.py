@@ -6,7 +6,7 @@ last = number % 10
 if number < 0:
     number *= -1
     last = number % 10
-    last *= -1 
+    last *= -1
 
 print("last digit of {:d}".format(number) + " is {:d}".format(last), end=" ")
 
