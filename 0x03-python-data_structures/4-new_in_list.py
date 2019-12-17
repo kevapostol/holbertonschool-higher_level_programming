@@ -5,7 +5,7 @@ the original list (like in C).'''
     if my_list:
         if idx < 0:
             return my_list
-        elif idx > len(my_list):
+        elif idx > len(my_list) - 1:
             return my_list
 
         new_list = my_list.copy()
