@@ -2,5 +2,5 @@
 def print_sorted_dictionary(a_dictionary):
     '''Prints a dictionary by ordered keys.'''
 
-    for k, v in a_dictionary.items():
+    for k, v in sorted(a_dictionary.items()):
         print(str(k) + ': ' + str(v))
