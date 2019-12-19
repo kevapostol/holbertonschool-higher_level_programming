@@ -2,7 +2,7 @@
 def square_matrix_simple(matrix=[]):
     '''Computes the square value of all integers of a matrix.'''
 
-    new_mtx = [];
+    new_mtx = []
 
     for mtx in matrix:
         sub = []
