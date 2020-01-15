@@ -33,6 +33,18 @@ Now testing it:
 	...
 	TypeError: b must be an integer
 
+	>>> num = float("NaN")
+	>>> add_integer(num)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> num = float("NaN")
+	>>> add_integer(1, num)
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
 	>>> add_integer(None)
 	Traceback (most recent call last):
 	...
@@ -47,3 +59,7 @@ Now testing it:
 	Traceback (most recent call last):
 	...
 	TypeError: b must be an integer
+
+	>>> add_integer(1, float('inf'))
+	1
+	
