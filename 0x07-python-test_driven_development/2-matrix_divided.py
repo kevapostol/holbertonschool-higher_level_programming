@@ -29,7 +29,7 @@ def matrix_divided(matrix, div):
             if type(num) is not int and type(num) is not float:
                 raise TypeError(err_must_be)
 
-    if len(matrix) > 0:
+    if len(matrix) > 1:
         count = len(matrix[1])
         for ele in matrix:
             if count is not len(ele):
