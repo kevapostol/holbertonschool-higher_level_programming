@@ -12,17 +12,17 @@ def text_indentation(text):
     '''
 
     st = ''
+    special = {'.', '?', ':'}
 
     if isinstance(text, str) is False:
         raise TypeError('text must be a string')
 
-    special = {'.', '?', ':'}
-
     for char in text:
+        st += char
 
-        if char not in special:
-            st += char
-        else:
-            st += char
-            print('{}\n'.format(st.strip()))
+        if char in special:
+            print(st.strip())
+            print()
             st = ''
+
+    print(st.strip(), end='')

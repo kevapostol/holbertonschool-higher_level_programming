@@ -24,6 +24,7 @@ Now testing it:
 	Apostol.
 	<BLANKLINE>
 	.
+	<BLANKLINE>
 
 	>>> text_indentation('''?:.''')
 	?
@@ -31,6 +32,7 @@ Now testing it:
 	:
 	<BLANKLINE>
 	.
+	<BLANKLINE>
 
 	>>> text_indentation('''Kevin.Apostol''')
 	Kevin.
