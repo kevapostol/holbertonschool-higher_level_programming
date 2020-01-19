@@ -10,22 +10,19 @@ def text_indentation(text):
     '''
     The function that that prints My name is <first name> <last name>
     '''
-    msg = text
 
-    if isinstance(msg, str) is False:
+    st = ''
+
+    if isinstance(text, str) is False:
         raise TypeError('text must be a string')
 
     special = {'.', '?', ':'}
-    flag = False
 
-    for c in range(len(msg)):
-        if c + 1 < len(msg) and msg[c] in special and msg[c + 1] == ' ':
-            print('{}'.format(msg[c]), end='\n\n')
-            flag = True
-        elif c + 1 < len(msg) and msg[c] in special and msg[c + 1] != ' ':
-            print('{}'.format(msg[c]), end='\n\n')
+    for char in text:
+
+        if char not in special:
+            st += char
         else:
-            if flag is True:
-                flag = False
-            else:
-                print('{}'.format(msg[c]), end='')
+            st += char
+            print('{}\n'.format(st.strip()))
+            st = ''
