@@ -6,6 +6,6 @@ The 5-base_geometry module
 
 class BaseGeometry:
     '''
-    class BaseGeometry
+    A BaseGeometry class
     '''
     pass

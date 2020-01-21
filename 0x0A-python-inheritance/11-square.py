@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-The 10-square module
+The 11-square module
 '''
 
 Rectangle = __import__('9-rectangle').BaseGeometry
@@ -22,4 +22,4 @@ class Square(Rectangle):
 
     def __str__(self):
         '''Returns a string when we try to use the print function'''
-        return '[Rectangle] {}/{}'.format(self.__size, self.__size)
+        return '[Square] {}/{}'.format(self.__width, self.__height)

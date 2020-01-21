@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 '''
-The 5-base_geometry module
+The 6-base_geometry module
 '''
 
 
 class BaseGeometry:
     '''
-    class BaseGeometry
+    A BaseGeometry class
     '''
+
     def area(self):
-        '''raises an exception area is not implemented'''
+        '''Raises an exception area is not implemented'''
         raise Exception('area() is not implemented')
