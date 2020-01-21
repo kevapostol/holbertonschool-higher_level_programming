@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-The 2-read_lines module
+The 3-write_files module
 '''
 
 
