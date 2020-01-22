@@ -1,0 +1,10 @@
+The ``7-base_geometry`` module
+======================
+
+imports the ``1-my_list`` module:
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Normal Test:
+
+    >>> bg = BaseGeometry()
