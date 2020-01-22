@@ -11,7 +11,7 @@ from sys import argv
 '''Imports the json and argv module'''
 
 if len(argv) is 1:
-    with open('add_item.json', mode='w', encoding='utf-8') as a_file:
+    with open('add_item.json', mode='a', encoding='utf-8') as a_file:
         a_file.write('[]')
 
 if len(argv) > 1:
