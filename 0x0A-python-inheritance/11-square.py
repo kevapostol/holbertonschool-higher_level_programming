@@ -3,7 +3,7 @@
 The 11-square module
 '''
 
-Rectangle = __import__('9-rectangle').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
