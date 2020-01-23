@@ -11,10 +11,10 @@ from sys import argv
 '''Imports the json and argv module'''
 
 try:
-    with open('add_item.json', mode= 'r', encoding='utf-8') as a_file:
+    with open('add_item.json', mode='r', encoding='utf-8') as a_file:
         pass
-except:
-    with open('add_item.json', mode= 'w', encoding='utf-8') as a_file:
+except BaseException:
+    with open('add_item.json', mode='w', encoding='utf-8') as a_file:
         a_file.write('[]')
 finally:
     if len(argv) > 1:
