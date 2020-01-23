@@ -24,7 +24,7 @@ class Student:
 
     def reload_from_json(self, json):
         '''Replaces all attributes of the Student instance'''
-        if len(json) is 0:
+        if len(json) is not 0:
             self.first_name = json['first_name']
             self.last_name = json['last_name']
             self.age = json['age']
