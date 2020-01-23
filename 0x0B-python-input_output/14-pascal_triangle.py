@@ -20,7 +20,7 @@ def pascal_triangle(n):
             temp2 = []
             for j in range(len(temp) - 1):
                 p1 = temp[j]
-                p1 = temp[j + 1]
+                p2 = temp[j + 1]
                 temp2.append(p1 + p2)
             li.append(temp2)
     return li
