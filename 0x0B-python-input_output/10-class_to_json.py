@@ -3,8 +3,6 @@
 The 10-class_to_json module
 '''
 
-import json
-'''Imports the json and argv module'''
 
 def class_to_json(obj):
     '''
