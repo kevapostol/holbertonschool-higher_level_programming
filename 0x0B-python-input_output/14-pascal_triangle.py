@@ -5,6 +5,7 @@ The 14-pascal_triangle module
 
 
 def pascal_triangle(n):
+    '''Returns a pascal triangle'''
     if n <= 0:
         return []
     else:
