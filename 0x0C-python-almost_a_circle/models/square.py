@@ -4,10 +4,12 @@ The Sqare module
 '''
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     '''
     A Square class inheriting Rectangle
     '''
+
     def __init__(self, size, x=0, y=0, id=None):
         '''Initializes the private variables'''
         super().__init__(size, size, x, y, id)
@@ -15,7 +17,7 @@ class Square(Rectangle):
     def __str__(self):
         '''Str function'''
         return '[Square] ({}) {}/{} - {}'.format(self.id, self.x,
-                self.y, self.width)
+                                                 self.y, self.width)
 
     @property
     def size(self):
@@ -55,3 +57,12 @@ class Square(Rectangle):
                 self.y = kwargs['y']
             if 'id' in kwargs:
                 self.id = kwargs['id']
+
+    def to_dictionary(self):
+        '''Returns the dictionary representation of a Rectangle'''
+        dic = {}
+        dic['id'] = self.id
+        dic['size'] = self.width
+        dic['x'] = self.x
+        dic['y'] = self.y
+        return dic
