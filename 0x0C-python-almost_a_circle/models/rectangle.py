@@ -26,7 +26,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         '''Width setter'''
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError('width must be an integer')
         if value <= 0:
             raise ValueError('width must be > 0')
@@ -40,7 +40,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         '''Height setter'''
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError('height must be an integer')
         if value <= 0:
             raise ValueError('height must be > 0')
@@ -54,7 +54,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         '''X setter'''
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError('x must be an integer')
         if value < 0:
             raise ValueError('x must be >= 0')
@@ -68,7 +68,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         '''Y setter'''
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError('y must be an integer')
         if value < 0:
             raise ValueError('y must be >= 0')
@@ -95,8 +95,8 @@ class Rectangle(Base):
 
     def __str__(self):
         '''Str function'''
-        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,
-                                                       self.__x, self.__y, self.__width, self.__height)
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(
+                self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
         '''Update the class Rectangle'''
