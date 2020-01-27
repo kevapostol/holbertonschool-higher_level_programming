@@ -4,7 +4,6 @@ The Base module
 '''
 import json
 
-
 class Base:
     '''
     A Base class
@@ -29,4 +28,12 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         '''Writes the JSON string representation of list_objs to a file'''
-        print(list_objs.to_dictionary)
+        list_t = []
+
+        for instance in list_objs:
+            list_t.append(cls.to_dictionary(instance))
+
+        filename = cls.__name__ + '.json'
+        with open(filename, mode='w', encoding='utf-8') as a_file:
+            '''Opens a file'''
+            json.dump(list_t, a_file)
