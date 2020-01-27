@@ -4,6 +4,7 @@ The Base module
 '''
 import json
 
+
 class Base:
     '''
     A Base class
@@ -40,4 +41,4 @@ class Base:
 
         filename = cls.__name__ + '.json'
         with open(filename, mode='w', encoding='utf-8') as a_file:
-            json.dump(list_t, a_file)
+            a_file.write(list_t)
