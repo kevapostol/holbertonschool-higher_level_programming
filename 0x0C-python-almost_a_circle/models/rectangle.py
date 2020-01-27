@@ -101,39 +101,47 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         '''Update the class Rectangle'''
         if len(args) > 0:
-            print("args here")
             if len(args) is 0:
                 return
             elif len(args) is 1:
                 self.id = args[0]
             elif len(args) is 2:
                 self.id = args[0]
-                self.__width = args[1]
+                self.width = args[1]
             elif len(args) is 3:
                 self.id = args[0]
-                self.__width = args[1]
-                self.__height = args[2]
+                self.width = args[1]
+                self.height = args[2]
             elif len(args) is 4:
                 self.id = args[0]
-                self.__width = args[1]
-                self.__height = args[2]
-                self.__x = args[3]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
             elif len(args) >= 5:
                 self.id = args[0]
-                self.__width = args[1]
-                self.__height = args[2]
-                self.__x = args[3]
-                self.__y = args[4]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
             return
         if len(kwargs) > 0:
-            for k, v in kwargs.items():
-                if 'width' in kwargs:
-                    self.__width = kwargs['width']
-                if 'height' in kwargs:
-                    self.__height = kwargs['height']
-                if 'x' in kwargs:
-                    self.__x = kwargs['x']
-                if 'y' in kwargs:
-                    self.__y = kwargs['y']
-                if 'id' in kwargs:
-                    self.id = kwargs['id']
+            if 'width' in kwargs:
+                self.width = kwargs['width']
+            if 'height' in kwargs:
+                self.height = kwargs['height']
+            if 'x' in kwargs:
+                self.x = kwargs['x']
+            if 'y' in kwargs:
+                self.y = kwargs['y']
+            if 'id' in kwargs:
+                self.id = kwargs['id']
+
+    def to_dictionary(self):
+        '''Returns the dictionary representation of a Rectangle'''
+        dic = {}
+        dic['x'] = self.x
+        dic['y'] = self.y
+        dic['width'] = self.width
+        dic['height'] = self.height
+        dic['id'] = self.id
+        return dic
