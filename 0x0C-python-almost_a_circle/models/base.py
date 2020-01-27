@@ -40,4 +40,4 @@ class Base:
 
         filename = cls.__name__ + '.json'
         with open(filename, mode='w', encoding='utf-8') as a_file:
-            a_file.write(list_t)
+            json.dump(list_t, a_file)
