@@ -57,7 +57,7 @@ class Base:
 
         if cls.__name__ == 'Rectangle':
             dummy_obj = cls(1, 1)
-        elif cls.__name == 'Square':
+        elif cls.__name__ == 'Square':
             dummy_obj = cls(1)
 
         dummy_obj.update(**dictionary)
