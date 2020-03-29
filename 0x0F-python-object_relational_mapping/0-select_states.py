@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
-# A script that lists all states from the database hbtn_0e_0_usa
-# usage: ./<exe> mysql username, mysql password
+"""
+A script that lists all states from the database hbtn_0e_0_usa
+
+usage: ./<exe> mysql username, mysql password
+"""
+
 import MySQLdb
 from sys import argv
 
