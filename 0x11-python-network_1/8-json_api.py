@@ -16,15 +16,15 @@ if __name__ == "__main__":
     else:
         val = argv[1]
 
-    url = "http://0.0.0.0:5000/search_user"
-    response = requests.post(url, data={'q': val})
-    deserialized_json = response.json()
     try:
-        is_valid = len(deserialized_json)
-        if is_valid >= 1:
+        url = "http://0.0.0.0:5000/search_user"
+        response = requests.post(url, data={'q': val})
+        deserialized_json = response.json()
+
+        if "id" in response and "name" in response:
             print("[{}] {}".format(deserialized_json.get("id"),
-                               deserialized_json.get("name")))
+                                   deserialized_json.get("name")))
         else:
             print("No result")
-    except:
+    except ValueError:
         print("Not a valid JSON")
