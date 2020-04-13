@@ -19,11 +19,12 @@ if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
     response = requests.post(url, data={'q': val})
     deserialized_json = response.json()
-
-    if response.request.headers['Content-Type'] is 'application/json':
-        print("Not a valid JSON")
-    elif len(deserialized_json) == 0:
-        print("No result")
-    else:
-        print("[{}] {}".format(deserialized_json.get("id"),
+    try:
+        is_valid = len(deserialized_json)
+        if is_valid == True:
+            print("[{}] {}".format(deserialized_json.get("id"),
                                deserialized_json.get("name")))
+        else:
+            print("No result")
+    except:
+        print("Not a valid JSON")
