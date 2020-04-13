@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 # a Python script that fetches https://intranet.hbtn.io/status
 
-from sys import argv
 import requests
 
 if __name__ == "__main__":
