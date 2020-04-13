@@ -14,8 +14,9 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         val = ""
     else:
+        url = "http://0.0.0.0:5000/search_user"
         val = argv[1]
-        response = requests.post(sys.argv[1], data={'q': val})
+        response = requests.post(url, data={'q': val})
         deserialized_json = response.json()
 
         if response.request.headers['Content-Type'] == 'application/json':
@@ -23,5 +24,6 @@ if __name__ == "__main__":
         else if len(deserialized_json) == 0:
             print("No result")
         else:
+            print(deserialized_json)
             print("[{}] {}".format(deserialized_json.get("id"),
                                    deserialized_json.get("name")))
