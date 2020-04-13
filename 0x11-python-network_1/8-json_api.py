@@ -20,7 +20,7 @@ if __name__ == "__main__":
     response = requests.post(url, data={'q': val})
     deserialized_json = response.json()
 
-    if response.request.headers['Content-Type'] != 'application/json':
+    if response.request.headers['Content-Type'] is 'application/json':
         print("Not a valid JSON")
     elif len(deserialized_json) == 0:
         print("No result")
