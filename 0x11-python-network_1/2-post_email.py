@@ -6,7 +6,7 @@ from sys import argv
 import urllib.parse
 import urllib.request
 
-if __name__ == 'main'
+if __name__ == 'main':
     url = argv[1]
     values = {'email': argv[2]}
     data = urllib.parse.urlencode(values)
