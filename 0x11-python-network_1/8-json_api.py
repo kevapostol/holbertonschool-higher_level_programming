@@ -14,17 +14,16 @@ if __name__ == "__main__":
     if len(argv) < 2:
         val = ""
     else:
-	val = argv[1]
+        val = argv[1]
 
+    url = "http://0.0.0.0:5000/search_user"
+    response = requests.post(url, data={'q': val})
+    deserialized_json = response.json()
 
-       	url = "http://0.0.0.0:5000/search_user"
-        response = requests.post(url, data={'q': val})
-        deserialized_json = response.json()
-
-        if response.request.headers['Content-Type'] == 'application/json':
-            print("Not a valid JSON")
-        elif len(deserialized_json) == 0:
-            print("No result")
-        else:
-            print("[{}] {}".format(deserialized_json.get("id"),
-                                   deserialized_json.get("name")))
+    if response.request.headers['Content-Type'] == 'application/json':
+        print("Not a valid JSON")
+    elif len(deserialized_json) == 0:
+        print("No result")
+    else:
+        print("[{}] {}".format(deserialized_json.get("id"),
+                                deserialized_json.get("name")))
