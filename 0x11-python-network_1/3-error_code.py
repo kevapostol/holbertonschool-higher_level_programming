@@ -3,17 +3,13 @@
 # and displays the body of the response
 
 from sys import argv
-from urllib.request import Request, urlopen
-from urllib.error import  URLError
-req = Request(someurl)
-try:
-    response = urlopen(argv[1])
-except URLError as e:
-    if hasattr(e, 'reason'):
-        print('We failed to reach a server.')
-        print('Reason: ', e.reason)
-    elif hasattr(e, 'code'):
-        print('The server couldn\'t fulfill the request.')
-        print('Error code: ', e.code)
-else:
-    pass
+import urllib.request
+
+req = Request(argv[1])
+if __name__ == "__main__":
+    try:
+        req = urllib.request.Request('https://intranet.hbtn.io/status')
+        with urllib.request.urlopen(req) as response:
+            the_page = response.read()
+    except urllib.error.HTTPError as error:
+        print("Error code: {}".format(error.code))
