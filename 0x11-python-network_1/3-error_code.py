@@ -5,10 +5,9 @@
 from sys import argv
 import urllib.request
 
-req = Request(argv[1])
 if __name__ == "__main__":
     try:
-        req = urllib.request.Request('https://intranet.hbtn.io/status')
+        req = urllib.request.Request(argv[1])
         with urllib.request.urlopen(req) as response:
             the_page = response.read()
     except urllib.error.HTTPError as error:
