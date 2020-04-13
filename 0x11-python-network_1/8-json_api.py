@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
         if response.request.headers['Content-Type'] == 'application/json':
             print("Not a valid JSON")
-        else if len(deserialized_json) == 0:
+        elif len(deserialized_json) == 0:
             print("No result")
         else:
             print(deserialized_json)
