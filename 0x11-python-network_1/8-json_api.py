@@ -21,7 +21,7 @@ if __name__ == "__main__":
     deserialized_json = response.json()
     try:
         is_valid = len(deserialized_json)
-        if is_valid == True:
+        if is_valid >= 1:
             print("[{}] {}".format(deserialized_json.get("id"),
                                deserialized_json.get("name")))
         else:
