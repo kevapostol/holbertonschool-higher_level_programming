@@ -21,7 +21,7 @@ if __name__ == "__main__":
         response = requests.post(url, data={'q': val})
         deserialized_json = response.json()
 
-        if "id" in response and "name" in response:
+        if "id" in deserialized_json and "name" in deserialized_json:
             print("[{}] {}".format(deserialized_json.get("id"),
                                    deserialized_json.get("name")))
         else:
