@@ -7,11 +7,11 @@ request.get(uri, (error, response, body) => {
   } else if (response.statusCode === 200) {
     const completedTasks = {};
     for (const task of JSON.parse(body)) {
-      if (task.completedTasks === true) {
-        if (!(task.userId in completedTasks)) {
-          completedTasks[task.userId] = 1;
-        } else {
+      if (task.completed === true) {
+        if (task.userId in completedTasks) {
           completedTasks[task.userId] += 1;
+        } else {
+          completedTasks[task.userId] = 1;
         }
       }
     }
