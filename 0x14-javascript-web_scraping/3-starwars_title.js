@@ -5,7 +5,7 @@ request.get(uri, (error, response, body) => {
   if (error) {
     console.log(error);
   } else if (response.statusCode === 200) {
-    const obj = JSON.parse(response.body);
+    const obj = JSON.parse(body);
     console.log(obj.title);
   }
 });
