@@ -11,7 +11,7 @@ request.get(uri, (error, response, body) => {
 
     for (const eaFilm of results) {
       for (const eaCharacter of eaFilm.characters) {
-        if (eaCharacter.indexOf('18') > -1) {
+        if (eaCharacter.includes('18')) {
           count += 1;
         }
       }
