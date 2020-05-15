@@ -1,4 +1,4 @@
 $(function () {
-    $h = $('header');
-    $h.css('color', '#FF0000');
+  $h = $('header');
+  $h.css('color', '#FF0000');
 });
